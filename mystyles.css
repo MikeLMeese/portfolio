@@ -1,0 +1,196 @@
+.intro {
+    padding: 20px;
+}
+footer {
+    padding: 15px;
+}
+.meme-image {
+    width: 100;
+    height: 100;
+}
+body {
+    background-color: #2a2a2a;
+    color: #8a8a8a;
+    font-family: 'Merriweather', serif;
+}
+h2 {
+    padding: 20px;
+}
+.col {
+    background-color: #2a2a2a;
+    padding: 20px;
+}
+.card {
+    background-color: lightsteelblue;
+    font-weight: bold;
+    opacity: 1.0;
+}
+.card:hover {
+    opacity: 0.8;
+}
+.butn {
+    padding: 10px;
+}
+.btn-primary {
+    background-color: lightseagreen;
+}
+.bg-primary {
+    background-color: lightseagreen;
+}
+hr {
+    visibility: hidden;
+    padding: 30px;
+}
+a:link {
+    color: #8a8a8a;
+    font-weight: bold;
+    font-size:large;
+}
+.smalltext {
+    font-size: small;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+textarea {
+    width: 1000px;
+    height: 250px;
+}
+/* Animations beyond this point */
+.rainbowtext {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 3s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+.bgtext1 {
+    background-image: url(https://media.giphy.com/media/l378oRnrBKIXFAEGA/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.bgtext2 {
+    background-image: url(https://media.giphy.com/media/0IGRygDt5cMP2Q0Jmu/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.bgtext3 {
+    background-image: url(https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.bgtext4 {
+    background-image: url(https://media.giphy.com/media/7FrOU9tPbgAZtxV5mb/giphy-downsized-large.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.bgtext5 {
+    background-image: url(https://media.giphy.com/media/3ov9jL6YCEBtw9hF2o/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+}
+.waviy {
+    position: relative;
+}
+.waviy span {
+    position: relative;
+    display: inline-block;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+    0%,80% {
+    transform: rotateY(360deg) 
+    }
+}
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+.reveal.active {
+    opacity: 1;
+}
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+    0% {
+    transform: translateY(50px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+@keyframes fade-left {
+    0% {
+    transform: translateX(-100px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+    transform: translateX(100px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+.hover-underline {
+    display: inline-block;
+    position: relative;
+    color: #8a8a8a;
+}
+
+.hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8a8a8a;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
